@@ -11,7 +11,7 @@ local timerID = os.startTimer(0.1)
   local event, side, channel, replyChannel, message, distance = os.pullEvent() -- Esperar un evento
     comprobacion = comprobacion + 1
 	destiny = destiny + 1
-	if event == "modem_message" and message == "Write: dial, disc, address or exit" then
+	if event == "modem_message" then
 	print("encontrado")
 	
 	local localModemWrite = io.open("modemlocal.data", "w")
