@@ -44,9 +44,9 @@ if mess1 == "start" then
 modem.transmit(tonumber(remote1),tonumber(local1), "restart")
 repeat
 repeat
-local timerId = os.startTimer(10)
+local timer, timerId = os.startTimer(10)
   event, side, channel, replyChannel, message, distance = os.pullEvent()
-  if event == "timer" then
+  if event == "timer" and timerId == 0 then
   print("")
   print("Remote Dialer not found")
   print("")
