@@ -44,7 +44,7 @@ if mess1 == "start" then
 modem.transmit(tonumber(remote1),tonumber(local1), "restart")
 repeat
 repeat
-local timerId = os.startTimer(1)
+local timerId = os.startTimer(10)
   event, side, channel, replyChannel, message, distance = os.pullEvent()
   if event == "timer" then
   print("")
